@@ -1,20 +1,67 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f3f3f3;
 }
 
-#flipbook {
+.container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.book {
     width: 800px;
-    height: 500px;
-    margin: 50px auto;
+    height: 600px;
+    perspective: 1500px;
+    position: relative;
+    overflow: hidden;
 }
 
 .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transform-origin: center right;
+    transform: rotateY(0deg);
+    transition: transform 0.8s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.page img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.page.hidden {
+    display: none;
+}
+
+.arrow {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    user-select: none;
+}
+
+.arrow:focus {
+    outline: none;
+}
+
+.arrow:active {
+    transform: scale(0.95);
 }

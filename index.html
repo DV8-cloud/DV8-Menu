@@ -3,33 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منيو الكافيه</title>
+    <title>DV8 Menu</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 </head>
 <body>
-    <div id="flipbook">
-        <div class="page">
-            <h1>مرحبًا بكم في كافيهنا</h1>
-        </div>
-        <div class="page">
-            <h2>المشروبات الساخنة</h2>
-            <ul>
-                <li>قهوة تركية - 20 جنيه</li>
-                <li>كابتشينو - 25 جنيه</li>
-                <li>شاي بالنعناع - 15 جنيه</li>
-            </ul>
-        </div>
-        <div class="page">
-            <h2>المشروبات الباردة</h2>
-            <ul>
-                <li>عصير برتقال - 25 جنيه</li>
-                <li>عصير مانجو - 30 جنيه</li>
-            </ul>
-        </div>
-    </div>
+    <div class="container">
+        <!-- زر السهم الأيسر -->
+        <button class="arrow left-arrow">←</button>
 
+        <!-- الكتيب -->
+        <div class="book">
+            <div class="page" id="page-1">
+                <img src="https://i.postimg.cc/NG5ZXtLQ/menu-page2.jpg" alt="صفحة المنيو 1">
+            </div>
+            <div class="page" id="page-2">
+                <img src="https://i.postimg.cc/L6kqmtHg/menu-page1.jpg" alt="صفحة المنيو 2">
+            </div>
+        </div>
+
+        <!-- زر السهم الأيمن -->
+        <button class="arrow right-arrow">→</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
