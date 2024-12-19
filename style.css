@@ -16,8 +16,8 @@ body {
 }
 
 .book {
-    width: 800px;
-    height: 600px;
+    width: 500px;
+    height: 700px;
     perspective: 1500px;
     position: relative;
     overflow: hidden;
